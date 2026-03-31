@@ -22,7 +22,7 @@ class HttpRouter {
     public function matchRequest($request) {
         $routeInfo = $this -> dispatcher -> dispatch(
             $request -> getMethod(),
-            $request -> getTarget()
+            $request -> getPath()
         );
 
         switch($routeInfo[0]) {
